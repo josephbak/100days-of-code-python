@@ -1,0 +1,2 @@
+Amazon | joe@email.com | password
+Ebay | joe@email.com | 123456

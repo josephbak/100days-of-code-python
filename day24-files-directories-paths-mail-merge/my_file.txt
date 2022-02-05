@@ -1,0 +1,4 @@
+Hello, my name is Olive.
+I am 10 years old.
+My favorite fruit is lemon.
+New text.
