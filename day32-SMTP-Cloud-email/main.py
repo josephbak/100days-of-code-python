@@ -4,10 +4,10 @@ import random
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv("../.env")
 
 MY_EMAIL = os.getenv("MY_EMAIL")
-MY_PASSWORD = os.getenv("MY_PASSWORD")
+MY_PASSWORD = os.getenv("MY_EMAIL_PASSWORD")
 
 #
 # with smtplib.SMTP("smtp.mail.yahoo.com") as connection:
@@ -30,7 +30,7 @@ MY_PASSWORD = os.getenv("MY_PASSWORD")
 
 now = dt.datetime.now()
 weekday = now.weekday()
-if weekday == 0: # 0 is Monday
+if weekday == 2: # 0 is Monday
     with open("quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)
