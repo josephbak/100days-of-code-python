@@ -3,7 +3,11 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
 from flask_bootstrap import Bootstrap
+import os
+from dotenv import load_dotenv
 # import email_validator
+
+load_dotenv("../.env")
 
 
 class LoginForm(FlaskForm):
@@ -13,7 +17,7 @@ class LoginForm(FlaskForm):
 
 
 app = Flask(__name__)
-app.secret_key = "any-string-you-want-just-keep-it-secret"
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 Bootstrap(app)
 
 
